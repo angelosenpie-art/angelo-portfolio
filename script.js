@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+            navbar.style.borderBottom = '4px solid #00ffff';
+            navbar.style.boxShadow = '0 4px 0 rgba(0, 255, 255, 0.5)';
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.05)';
+            navbar.style.borderBottom = '4px solid #00ff00';
+            navbar.style.boxShadow = '0 4px 0 rgba(0, 255, 0, 0.3)';
         }
     });
 
@@ -117,9 +117,53 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
 
-    // Removed glitch effect for minimalist design
+    // Pixel glitch effect for retro gaming
+    const glitchElement = document.querySelector('.glitch');
+    if (glitchElement) {
+        setInterval(() => {
+            const random = Math.random();
+            if (random > 0.97) {
+                glitchElement.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`;
+                setTimeout(() => {
+                    glitchElement.style.transform = 'translate(0, 0)';
+                }, 100);
+            }
+        }, 200);
+    }
 
-    // Removed particle effects for minimalist design
+    // Pixel stars background effect
+    function createPixelStars() {
+        const hero = document.querySelector('.hero');
+        if (!hero) return;
+
+        for (let i = 0; i < 30; i++) {
+            const star = document.createElement('div');
+            star.className = 'pixel-star';
+            star.style.cssText = `
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: ${Math.random() > 0.5 ? '#00ff00' : '#00ffff'};
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: pixelTwinkle ${2 + Math.random() * 3}s infinite;
+                z-index: 0;
+            `;
+            hero.appendChild(star);
+        }
+    }
+
+    // Add pixel animation CSS
+    const pixelStyle = document.createElement('style');
+    pixelStyle.textContent = `
+        @keyframes pixelTwinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.5); }
+        }
+    `;
+    document.head.appendChild(pixelStyle);
+    
+    createPixelStars();
 
     // Counter Animation for Stats
     const statNumbers = document.querySelectorAll('.stat-number');
@@ -186,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Notification System
+    // Notification System - Retro Style
     function showNotification(message, type) {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
@@ -196,22 +240,25 @@ document.addEventListener('DOMContentLoaded', function() {
             top: 100px;
             right: 20px;
             padding: 1rem 2rem;
-            background: ${type === 'success' ? '#2c3e50' : '#e74c3c'};
-            color: white;
-            border-radius: 6px;
-            font-weight: 600;
+            background: ${type === 'success' ? '#00ff00' : '#ff00ff'};
+            color: #0f0f1e;
+            border-radius: 0;
+            font-weight: 400;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
             z-index: 10000;
-            animation: slideIn 0.3s ease-out;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            animation: slideIn 0.2s steps(4);
+            border: 4px solid #0f0f1e;
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
         `;
 
         document.body.appendChild(notification);
 
         setTimeout(() => {
-            notification.style.animation = 'slideOut 0.3s ease-out';
+            notification.style.animation = 'slideOut 0.2s steps(4)';
             setTimeout(() => {
                 notification.remove();
-            }, 300);
+            }, 200);
         }, 3000);
     }
 
@@ -271,15 +318,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Console message
-    console.log('%cWelcome to Angelo\'s Portfolio', 'color: #2c3e50; font-size: 18px; font-weight: bold;');
-    console.log('%cLooking for something? Check out the source code on GitHub!', 'color: #7f8c8d; font-size: 14px;');
+    // Retro console message
+    console.log('%c GAME START! ', 'background: #00ff00; color: #0f0f1e; font-size: 20px; font-family: monospace; padding: 10px;');
+    console.log('%c▸ PLAYER: ANGELO SINDAY', 'color: #00ffff; font-size: 16px; font-family: monospace;');
+    console.log('%c▸ LEVEL: PORTFOLIO v1.0', 'color: #ff00ff; font-size: 16px; font-family: monospace;');
+    console.log('%c▸ PRESS START TO VIEW CODE', 'color: #00ff00; font-size: 14px; font-family: monospace;');
 
-    // Removed cursor trail effect for minimalist design
+    // Removed cursor trail effect
 
-    // Back to Top Button
+    // Back to Top Button - Retro Style
     const backToTop = document.createElement('button');
-    backToTop.innerHTML = '↑';
+    backToTop.innerHTML = '▲';
     backToTop.className = 'back-to-top';
     backToTop.style.cssText = `
         position: fixed;
@@ -287,17 +336,18 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: #2c3e50;
-        color: white;
-        border: none;
-        border-radius: 50%;
+        background: #00ff00;
+        color: #0f0f1e;
+        border: 4px solid #0f0f1e;
+        border-radius: 0;
         font-size: 24px;
+        font-family: 'Press Start 2P', cursive;
         cursor: pointer;
         opacity: 0;
         pointer-events: none;
-        transition: all 0.3s ease;
+        transition: all 0.1s steps(2);
         z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
     `;
 
     document.body.appendChild(backToTop);
@@ -320,13 +370,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     backToTop.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.05)';
-        this.style.background = '#34495e';
+        this.style.background = '#00ffff';
+        this.style.boxShadow = '4px 4px 0 #00ffff';
     });
 
     backToTop.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-        this.style.background = '#2c3e50';
+        this.style.background = '#00ff00';
+        this.style.boxShadow = '4px 4px 0 rgba(0, 0, 0, 0.5)';
     });
 
     console.log('Portfolio loaded successfully!');
