@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(10, 14, 39, 0.98)';
-            navbar.style.boxShadow = '0 5px 20px rgba(0, 243, 255, 0.2)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
         } else {
-            navbar.style.background = 'rgba(10, 14, 39, 0.95)';
-            navbar.style.boxShadow = 'none';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.05)';
         }
     });
 
@@ -117,71 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
 
-    // Glitch Effect Enhancement
-    const glitchElement = document.querySelector('.glitch');
-    if (glitchElement) {
-        setInterval(() => {
-            const random = Math.random();
-            if (random > 0.95) {
-                glitchElement.style.textShadow = `
-                    ${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px 0 #00f3ff,
-                    ${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px 0 #ff00ff
-                `;
-                setTimeout(() => {
-                    glitchElement.style.textShadow = `
-                        0 0 10px var(--primary-color),
-                        0 0 20px var(--primary-color),
-                        0 0 30px var(--primary-color)
-                    `;
-                }, 50);
-            }
-        }, 100);
-    }
+    // Removed glitch effect for minimalist design
 
-    // Particle Background Effect
-    function createParticles() {
-        const heroBg = document.querySelector('.hero-bg');
-        if (!heroBg) return;
-
-        for (let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.cssText = `
-                position: absolute;
-                width: 2px;
-                height: 2px;
-                background: ${Math.random() > 0.5 ? '#00f3ff' : '#ff00ff'};
-                border-radius: 50%;
-                left: ${Math.random() * 100}%;
-                top: ${Math.random() * 100}%;
-                animation: float ${5 + Math.random() * 10}s infinite ease-in-out;
-                opacity: ${Math.random() * 0.5 + 0.2};
-            `;
-            heroBg.appendChild(particle);
-        }
-    }
-
-    // Add particle animation CSS
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) translateX(0);
-            }
-            25% {
-                transform: translateY(-20px) translateX(10px);
-            }
-            50% {
-                transform: translateY(-40px) translateX(-10px);
-            }
-            75% {
-                transform: translateY(-20px) translateX(10px);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    createParticles();
+    // Removed particle effects for minimalist design
 
     // Counter Animation for Stats
     const statNumbers = document.querySelectorAll('.stat-number');
@@ -258,13 +196,13 @@ document.addEventListener('DOMContentLoaded', function() {
             top: 100px;
             right: 20px;
             padding: 1rem 2rem;
-            background: ${type === 'success' ? '#00ff88' : '#ff0055'};
-            color: #0a0e27;
-            border-radius: 8px;
+            background: ${type === 'success' ? '#2c3e50' : '#e74c3c'};
+            color: white;
+            border-radius: 6px;
             font-weight: 600;
             z-index: 10000;
             animation: slideIn 0.3s ease-out;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         `;
 
         document.body.appendChild(notification);
@@ -333,48 +271,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Console Easter Egg
-    console.log('%c👾 Welcome to Angelo\'s Portfolio! 🎮', 'color: #00f3ff; font-size: 20px; font-weight: bold;');
-    console.log('%cLooking for something? Check out the source code on GitHub!', 'color: #ff00ff; font-size: 14px;');
+    // Console message
+    console.log('%cWelcome to Angelo\'s Portfolio', 'color: #2c3e50; font-size: 18px; font-weight: bold;');
+    console.log('%cLooking for something? Check out the source code on GitHub!', 'color: #7f8c8d; font-size: 14px;');
 
-    // Cursor Trail Effect (Optional)
-    let cursorTrail = [];
-    document.addEventListener('mousemove', function(e) {
-        if (cursorTrail.length > 5) {
-            const oldTrail = cursorTrail.shift();
-            if (oldTrail && oldTrail.parentNode) {
-                oldTrail.remove();
-            }
-        }
-
-        const trail = document.createElement('div');
-        trail.style.cssText = `
-            position: fixed;
-            width: 5px;
-            height: 5px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            pointer-events: none;
-            left: ${e.clientX}px;
-            top: ${e.clientY}px;
-            z-index: 9999;
-            animation: trailFade 0.5s ease-out forwards;
-        `;
-        
-        document.body.appendChild(trail);
-        cursorTrail.push(trail);
-    });
-
-    const trailStyle = document.createElement('style');
-    trailStyle.textContent = `
-        @keyframes trailFade {
-            to {
-                opacity: 0;
-                transform: scale(0);
-            }
-        }
-    `;
-    document.head.appendChild(trailStyle);
+    // Removed cursor trail effect for minimalist design
 
     // Back to Top Button
     const backToTop = document.createElement('button');
@@ -386,8 +287,8 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: var(--primary-color);
-        color: var(--bg-dark);
+        background: #2c3e50;
+        color: white;
         border: none;
         border-radius: 50%;
         font-size: 24px;
@@ -396,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pointer-events: none;
         transition: all 0.3s ease;
         z-index: 1000;
-        box-shadow: 0 5px 20px rgba(0, 243, 255, 0.3);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     `;
 
     document.body.appendChild(backToTop);
@@ -419,15 +320,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     backToTop.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.1)';
-        this.style.boxShadow = '0 5px 30px rgba(0, 243, 255, 0.6)';
+        this.style.transform = 'scale(1.05)';
+        this.style.background = '#34495e';
     });
 
     backToTop.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1)';
-        this.style.boxShadow = '0 5px 20px rgba(0, 243, 255, 0.3)';
+        this.style.background = '#2c3e50';
     });
 
-    console.log('🎮 Portfolio loaded successfully!');
+    console.log('Portfolio loaded successfully!');
 });
 
