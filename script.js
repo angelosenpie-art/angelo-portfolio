@@ -42,11 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            navbar.style.borderBottom = '4px solid #00ffff';
-            navbar.style.boxShadow = '0 4px 0 rgba(0, 255, 255, 0.5)';
+            navbar.style.boxShadow = '0 4px 0 rgba(0, 0, 0, 0.2)';
         } else {
-            navbar.style.borderBottom = '4px solid #00ff00';
-            navbar.style.boxShadow = '0 4px 0 rgba(0, 255, 0, 0.3)';
+            navbar.style.boxShadow = '0 4px 0 rgba(0, 0, 0, 0.1)';
         }
     });
 
@@ -131,39 +129,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 200);
     }
 
-    // Pixel stars background effect
-    function createPixelStars() {
+    // Pixel squares background effect
+    function createPixelSquares() {
         const hero = document.querySelector('.hero');
         if (!hero) return;
 
-        for (let i = 0; i < 30; i++) {
-            const star = document.createElement('div');
-            star.className = 'pixel-star';
-            star.style.cssText = `
+        for (let i = 0; i < 20; i++) {
+            const square = document.createElement('div');
+            square.className = 'pixel-square';
+            square.style.cssText = `
                 position: absolute;
-                width: 4px;
-                height: 4px;
-                background: ${Math.random() > 0.5 ? '#00ff00' : '#00ffff'};
+                width: 8px;
+                height: 8px;
+                background: ${Math.random() > 0.5 ? '#000000' : '#666666'};
                 left: ${Math.random() * 100}%;
                 top: ${Math.random() * 100}%;
-                animation: pixelTwinkle ${2 + Math.random() * 3}s infinite;
+                animation: pixelFloat ${5 + Math.random() * 5}s infinite ease-in-out;
                 z-index: 0;
+                opacity: 0.3;
             `;
-            hero.appendChild(star);
+            hero.appendChild(square);
         }
     }
 
     // Add pixel animation CSS
     const pixelStyle = document.createElement('style');
     pixelStyle.textContent = `
-        @keyframes pixelTwinkle {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(1.5); }
+        @keyframes pixelFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
     `;
     document.head.appendChild(pixelStyle);
     
-    createPixelStars();
+    createPixelSquares();
 
     // Counter Animation for Stats
     const statNumbers = document.querySelectorAll('.stat-number');
@@ -230,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Notification System - Retro Style
+    // Notification System - Black & White Retro Style
     function showNotification(message, type) {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
@@ -240,16 +239,16 @@ document.addEventListener('DOMContentLoaded', function() {
             top: 100px;
             right: 20px;
             padding: 1rem 2rem;
-            background: ${type === 'success' ? '#00ff00' : '#ff00ff'};
-            color: #0f0f1e;
+            background: ${type === 'success' ? '#ffffff' : '#000000'};
+            color: ${type === 'success' ? '#000000' : '#ffffff'};
             border-radius: 0;
             font-weight: 400;
             font-family: 'Press Start 2P', cursive;
             font-size: 0.8rem;
             z-index: 10000;
             animation: slideIn 0.2s steps(4);
-            border: 4px solid #0f0f1e;
-            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+            border: 4px solid ${type === 'success' ? '#000000' : '#ffffff'};
+            box-shadow: 6px 6px 0 #666666;
         `;
 
         document.body.appendChild(notification);
@@ -318,15 +317,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Retro console message
-    console.log('%c GAME START! ', 'background: #00ff00; color: #0f0f1e; font-size: 20px; font-family: monospace; padding: 10px;');
-    console.log('%c▸ PLAYER: ANGELO SINDAY', 'color: #00ffff; font-size: 16px; font-family: monospace;');
-    console.log('%c▸ LEVEL: PORTFOLIO v1.0', 'color: #ff00ff; font-size: 16px; font-family: monospace;');
-    console.log('%c▸ PRESS START TO VIEW CODE', 'color: #00ff00; font-size: 14px; font-family: monospace;');
+    // Retro console message - Black & White
+    console.log('%c ▓▓▓ GAME START ▓▓▓ ', 'background: #000000; color: #ffffff; font-size: 20px; font-family: monospace; padding: 10px; font-weight: bold;');
+    console.log('%c▸ PLAYER: ANGELO SINDAY', 'color: #000000; font-size: 16px; font-family: monospace; font-weight: bold;');
+    console.log('%c▸ LEVEL: PORTFOLIO v1.0', 'color: #666666; font-size: 16px; font-family: monospace;');
+    console.log('%c▸ PRESS START TO VIEW CODE', 'color: #000000; font-size: 14px; font-family: monospace;');
 
     // Removed cursor trail effect
 
-    // Back to Top Button - Retro Style
+    // Back to Top Button - Black & White Retro Style
     const backToTop = document.createElement('button');
     backToTop.innerHTML = '▲';
     backToTop.className = 'back-to-top';
@@ -336,9 +335,9 @@ document.addEventListener('DOMContentLoaded', function() {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: #00ff00;
-        color: #0f0f1e;
-        border: 4px solid #0f0f1e;
+        background: #000000;
+        color: #ffffff;
+        border: 4px solid #000000;
         border-radius: 0;
         font-size: 24px;
         font-family: 'Press Start 2P', cursive;
@@ -347,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pointer-events: none;
         transition: all 0.1s steps(2);
         z-index: 1000;
-        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 4px 4px 0 #666666;
     `;
 
     document.body.appendChild(backToTop);
@@ -370,13 +369,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     backToTop.addEventListener('mouseenter', function() {
-        this.style.background = '#00ffff';
-        this.style.boxShadow = '4px 4px 0 #00ffff';
+        this.style.background = '#ffffff';
+        this.style.color = '#000000';
     });
 
     backToTop.addEventListener('mouseleave', function() {
-        this.style.background = '#00ff00';
-        this.style.boxShadow = '4px 4px 0 rgba(0, 0, 0, 0.5)';
+        this.style.background = '#000000';
+        this.style.color = '#ffffff';
     });
 
     console.log('Portfolio loaded successfully!');
