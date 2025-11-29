@@ -13,10 +13,11 @@ export interface PersonalInfo {
   
   export const personalInfo: PersonalInfo = {
     name: "Angelo Sinday",
-    title: "WordPress Developer & Full-Stack Developer",
-    bio: "Experienced WordPress developer with 6+ years of expertise in creating custom websites, theme development, and optimization. Specialized in security, performance, and delivering high-quality solutions for clients worldwide.",
-    location: "Remote",
+    title: "Web Developer | WordPress & Shopify Specialist",
+    bio: "A Filipino dad website developer with a strong eye for innovative design and a keen understanding of techniques geared toward optimum user experience. 7+ years of experience in WordPress, Shopify development, and full-stack web development.",
+    location: "Butuan City, 8600, Philippines",
     email: "angelosinday.dev@gmail.com",
+    phone: "+639914028309",
     website: "https://angelosinday.me",
     linkedin: "https://linkedin.com/in/angelosinday",
     github: "https://github.com/angelosinday",
@@ -24,14 +25,15 @@ export interface PersonalInfo {
   };
   
   export const aboutMe = {
-    introduction: "I'm an experienced WordPress developer with over 6 years of expertise in creating custom websites, optimizing performance, and providing comprehensive web solutions for clients across various industries.",
+    introduction: "I'm Angelo Sinday, a Filipino dad website developer with a strong eye for innovative design and a keen understanding of techniques geared toward optimum user experience. With over 7 years of professional experience, I specialize in WordPress, Shopify development, and full-stack web solutions. I'm passionate about creating websites that not only look great but also deliver exceptional user experiences.",
     
     interests: [
-      "WordPress Development",
-      "Website Security & Optimization",
+      "WordPress & Shopify Development",
+      "Website Security & Malware Removal",
       "Custom Theme Development",
-      "Performance Optimization",
-      "Client Success"
+      "Performance Optimization & SEO",
+      "AI Integration & Modern Web Technologies",
+      "Client Success & Support"
     ],
     
     personalValues: [
@@ -39,8 +41,10 @@ export interface PersonalInfo {
       "Client satisfaction",
       "Security-first approach",
       "Performance optimization",
-      "Reliable support"
+      "Reliable support",
+      "Innovative design",
+      "User experience focus"
     ],
     
-    currentFocus: "Currently expanding skills in modern JavaScript frameworks while maintaining expertise in WordPress development, security, and performance optimization."
+    currentFocus: "Currently working on AI integration projects, modern JavaScript frameworks, and expanding expertise in SEO and content generation while maintaining strong WordPress and Shopify development skills."
   };

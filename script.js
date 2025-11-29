@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typing Effect for Subtitle
     const subtitle = document.querySelector('.subtitle');
     if (subtitle) {
-        const text = 'Full Stack Developer';
+        const text = 'Web Developer';
         const cursorSpan = subtitle.querySelector('.cursor-blink');
         subtitle.textContent = '';
         

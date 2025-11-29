@@ -25,30 +25,79 @@ export interface Education {
 
 export const workExperience: WorkExperience[] = [
   {
+    id: "oxy-creative-parttime",
+    company: "OXY Creative",
+    position: "WordPress Developer (Part-time)",
+    location: "Remote",
+    startDate: "2022-09",
+    current: true,
+    description: "Part-time WordPress developer providing website maintenance and editing services for various client projects.",
+    responsibilities: [
+      "Website maintenance and updates",
+      "Website editing and content management",
+      "Bug fixes and troubleshooting",
+      "Feature implementation and enhancements",
+      "Client support and communication"
+    ],
+    achievements: [
+      "Maintained long-term partnership spanning 2+ years",
+      "Consistently delivered quality updates and maintenance",
+      "Provided reliable support for multiple client projects",
+      "Ensured website stability and performance"
+    ],
+    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "Various Page Builders"],
+    type: "Part-time"
+  },
+  {
+    id: "ilx-travel-fulltime",
+    company: "ILX Travel",
+    position: "WordPress Developer (Full-time)",
+    location: "Remote",
+    startDate: "2023-07",
+    endDate: "2024-11",
+    current: false,
+    description: "Full-time WordPress developer responsible for website maintenance and editing for travel industry client.",
+    responsibilities: [
+      "Website maintenance and regular updates",
+      "Content editing and management",
+      "Feature implementation for travel booking",
+      "Performance optimization",
+      "Technical support and troubleshooting"
+    ],
+    achievements: [
+      "Maintained high-performance travel website",
+      "Implemented booking system improvements",
+      "Ensured 99.9% uptime during peak travel seasons",
+      "Enhanced user experience for international travelers"
+    ],
+    technologies: ["WordPress", "Elementor Pro", "PHP", "JavaScript", "CSS3", "Travel Booking Systems"],
+    type: "Full-time"
+  },
+  {
     id: "freelance-wordpress-dev",
-    company: "Freelance WordPress Development",
-    position: "WordPress Developer",
+    company: "UpWork & OnlineJobs",
+    position: "WordPress / Shopify Developer (Freelance)",
     location: "Remote",
     startDate: "2018-01",
     current: true,
-    description: "Providing comprehensive WordPress development services to clients worldwide, specializing in custom websites, theme development, and optimization.",
+    description: "Providing comprehensive WordPress and Shopify development services to clients worldwide, specializing in custom websites, e-commerce, SEO, and AI integration.",
     responsibilities: [
-      "Develop custom WordPress websites from scratch",
-      "Create and customize WordPress themes and plugins",
-      "Implement responsive designs using various page builders",
-      "Optimize website performance and loading speeds",
-      "Provide ongoing maintenance and support",
-      "Handle website migrations and hosting management"
+      "Develop and update WordPress websites",
+      "Develop and update Shopify stores",
+      "Technical SEO implementation and optimization",
+      "SEO AI Content Generation",
+      "AI Integration for enhanced functionality",
+      "E-commerce solutions and payment gateway integration"
     ],
     achievements: [
-      "Successfully maintained freelance business for 6+ years",
-      "Built 100+ custom WordPress websites",
-      "Achieved consistent client satisfaction and repeat business",
-      "Specialized in performance optimization and security"
+      "Successfully maintained freelance business for 7+ years",
+      "Built 100+ custom websites (WordPress & Shopify)",
+      "Achieved consistent 5-star ratings and client satisfaction",
+      "Specialized in SEO, AI integration, and performance optimization"
     ],
     technologies: [
-      "WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "Elementor Pro", 
-      "Beaver Builder", "Divi Builder", "WP Bakery", "Kadence", "Gutenberg"
+      "WordPress", "Shopify", "PHP", "HTML5", "CSS3", "JavaScript", 
+      "Elementor Pro", "WooCommerce", "SEO Tools", "AI APIs", "Zapier"
     ],
     type: "Freelance"
   },
@@ -85,18 +134,20 @@ export const workExperience: WorkExperience[] = [
     startDate: "2022-10",
     endDate: "2024-01",
     current: false,
-    description: "WordPress development specialist handling international clients, focusing on custom website creation, design, and maintenance.",
+    description: "WordPress development specialist handling international clients, focusing on custom website creation, design, and maintenance. Directly communicated with Denmark-based clients.",
     responsibilities: [
       "Create websites from scratch based on client requirements",
       "Provide comprehensive client support and communication",
       "Design and implement custom website layouts",
       "Handle ongoing website maintenance and updates",
-      "Collaborate with international clients, including Denmark-based projects"
+      "Communicate directly with Denmark clients for project requirements",
+      "Manage multiple client projects simultaneously"
     ],
     achievements: [
       "Successfully managed multiple international client projects",
       "Delivered high-quality websites meeting diverse client needs",
       "Maintained excellent client relationships across different time zones",
+      "Built strong rapport with Denmark-based clients",
       "Contributed to company's international expansion efforts"
     ],
     technologies: ["WordPress", "PHP", "Elementor", "Custom Post Types", "CSS3", "JavaScript"],
@@ -183,17 +234,17 @@ export const education: Education[] = [
   {
     id: "computer-science-degree",
     institution: "Caraga State University",
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Science",
     field: "Computer Science",
     location: "Butuan City, Philippines",
-    startDate: "2018-09",
-    endDate: "2022-05",
+    startDate: "2015-08",
+    endDate: "2019-05",
   }
 ];
 
 export const experienceStats = {
-  totalYearsOfExperience: 6,
-  projectsCompleted: 100,
-  clientsSatisfied: 50,
-  technologiesMastered: 20
+  totalYearsOfExperience: 7,
+  projectsCompleted: 150,
+  clientsSatisfied: 80,
+  technologiesMastered: 25
 };

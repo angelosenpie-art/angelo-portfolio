@@ -18,6 +18,78 @@ export interface Project {
   
   export const projects: Project[] = [
     {
+      id: "shenkman-tietz-law",
+      title: "Shenkman Tietz, LLP",
+      description: "Boutique estate planning law firm website for high-net-worth individuals with comprehensive legal services showcase",
+      longDescription: "Professional law firm website for Shenkman Tietz, LLP - a boutique estate planning firm founded in 1989, focused on high-net-worth individuals. Features comprehensive service information, blog articles, client portal integration, and professional design reflecting the firm's expertise in estate planning, asset protection, and tax planning.",
+      technologies: ["WordPress", "PHP", "CSS3", "JavaScript", "ShareFile Integration", "Responsive Design", "SEO"],
+      features: [
+        "Comprehensive service pages (Estate Planning, Irrevocable Trusts, Asset Protection, Tax Planning)",
+        "Integrated client portal with ShareFile",
+        "Blog section with estate planning insights and legal updates",
+        "Professional and clean corporate design",
+        "Mobile-responsive layout",
+        "Contact forms and client communication tools",
+        "Educational resources and practical ideas section"
+      ],
+      challenges: [
+        "Creating a professional design that builds trust and credibility",
+        "Organizing complex legal services information clearly",
+        "Integrating secure client portal functionality",
+        "Ensuring compliance with legal industry standards",
+        "Presenting complex estate planning concepts accessibly"
+      ],
+      lessons: [
+        "Legal industry website best practices",
+        "Client portal integration techniques",
+        "Professional service presentation strategies",
+        "Estate planning content organization"
+      ],
+      demoUrl: "https://shenkmantietz.com/",
+      status: "Completed",
+      startDate: "2024-08",
+      endDate: "2025-01",
+      category: "Web App"
+    },
+    {
+      id: "shenkman-education",
+      title: "Shenkman Education",
+      description: "Comprehensive educational platform for estate planning resources including webinars, articles, videos, and professional materials",
+      longDescription: "Educational resource hub with 50+ years of estate planning knowledge, providing both consumer and professional-level content. Features extensive databases of articles, webinars, video clips, newsletters, and books. Built to serve as a comprehensive learning platform for estate planning professionals and individuals seeking estate planning information.",
+      technologies: ["WordPress", "PHP", "JavaScript", "CSS3", "Video Integration", "Search Functionality", "Content Management", "Database"],
+      features: [
+        "Dual-audience content (Consumer and Professional resources)",
+        "Extensive searchable database of articles and resources",
+        "Video clips and educational shorts library",
+        "Webinars and PowerPoint presentations archive",
+        "Newsletter subscription system",
+        "Books and publications showcase with Amazon integration",
+        "Advanced filtering by topics and categories",
+        "Resource hub with multiple content types",
+        "Newsletter signup for estate planning updates"
+      ],
+      challenges: [
+        "Organizing massive content library across multiple formats",
+        "Creating effective search and filtering system",
+        "Separating consumer and professional content appropriately",
+        "Integrating video content seamlessly",
+        "Managing and displaying extensive article database",
+        "Ensuring fast performance with large content volume"
+      ],
+      lessons: [
+        "Large-scale content management strategies",
+        "Educational platform architecture",
+        "Multi-format content integration",
+        "User experience for knowledge databases",
+        "Professional education website design"
+      ],
+      demoUrl: "https://shenkmaneducation.com/",
+      status: "Completed",
+      startDate: "2024-09",
+      endDate: "2025-01",
+      category: "Web App"
+    },
+    {
       id: "croatia-yacht-charter",
       title: "My Croatia Yacht Charter",
       description: "Advanced yacht charter website with API integration and AI-powered features",
