@@ -208,24 +208,39 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Basic validation
-            if (name && email && subject && message) {
-                // Show success message
-                showNotification('Message sent successfully! 🎮', 'success');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // In a real application, you would send this data to a server
-                console.log('Form Data:', { name, email, subject, message });
-            } else {
-                showNotification('Please fill in all fields! ⚠️', 'error');
-            }
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Send form data to PHP script
+            fetch('send-email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showNotification('Message sent successfully! 🎮', 'success');
+                    contactForm.reset();
+                } else {
+                    showNotification(data.message || 'Failed to send message! ⚠️', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('An error occurred. Please try again! ⚠️', 'error');
+            })
+            .finally(() => {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            });
         });
     }
 

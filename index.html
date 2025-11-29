@@ -6,7 +6,7 @@
     <meta name="description" content="Angelo's Gaming Portfolio - Web Developer & Gamer">
     <title>Angelo | Gaming Portfolio</title>
     <link rel="icon" type="image/png" href="public/images/angelo fav.png">
-    <link rel="stylesheet" href="styles.css?v=2.3">
+    <link rel="stylesheet" href="styles.css?v=2.4">
     
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
@@ -328,19 +328,21 @@
                         <a href="https://github.com/angelosenpie-art/" class="social-link" aria-label="GitHub">GitHub</a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" method="POST">
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                     </div>
+                    <!-- Honeypot field for spam protection (hidden from users) -->
+                    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -354,7 +356,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=2.3"></script>
+    <script src="script.js?v=2.4"></script>
 </body>
 </html>
 
