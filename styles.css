@@ -416,6 +416,35 @@ section {
     background: var(--bg-dark);
 }
 
+.projects-header {
+    padding: 150px 0 50px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.projects-subtitle {
+    font-size: 1.2rem;
+    color: #666666;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.all-projects-page {
+    padding: 50px 0 100px;
+}
+
+.view-all-projects {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: 3rem;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

@@ -216,26 +216,33 @@ export interface Project {
     },
     {
       id: "paulin-insurance",
-      title: "Paulin Insurance",
-      description: "Professional insurance company website with service information and quote requests",
-      longDescription: "Corporate insurance website providing comprehensive information about insurance services, agent profiles, and customer resources.",
-      technologies: ["WordPress", "Divi Builder", "PHP", "CSS3", "Contact Forms", "SEO Tools"],
+      title: "Paulin Insurance Associates",
+      description: "Professional insurance agency website with comprehensive service offerings and quote request system",
+      longDescription: "Full-service insurance agency website for Paulin Insurance Associates, LLC - a locally owned independent insurance agency in the Metairie, New Orleans area. Features personal, commercial, life & health, and surety bond services. With over 70 years combined experience, the site showcases their expertise in providing comprehensive insurance solutions for the Gulf South region.",
+      technologies: ["WordPress", "Divi Builder", "PHP", "CSS3", "JavaScript", "Contact Forms", "Payment Integration", "SEO Tools"],
       features: [
-        "Insurance service descriptions",
-        "Agent profile pages",
-        "Quote request forms",
-        "Resource center for customers",
-        "Professional corporate design"
+        "Comprehensive service pages (Personal, Commercial, Life & Health, Surety Bonds)",
+        "Online quote request forms with service type selection",
+        "Make a payment portal integration",
+        "Insurance partner/carrier showcase",
+        "Licensed agent information and credentials",
+        "Contact forms and consultation booking",
+        "Claims submission system",
+        "Mobile-responsive professional design",
+        "Social media integration (Facebook, LinkedIn)"
       ],
       challenges: [
-        "Presenting complex insurance information clearly",
-        "Creating trust through design",
-        "Optimizing for insurance-related keywords"
+        "Presenting complex insurance products clearly to diverse audiences",
+        "Building trust and credibility for a local independent agency",
+        "Integrating payment processing securely",
+        "Optimizing for local SEO in competitive New Orleans market",
+        "Showcasing multiple insurance carriers and partnerships"
       ],
       lessons: [
-        "Financial services web design principles",
-        "Compliance considerations in insurance websites",
-        "Building credibility through professional presentation"
+        "Insurance industry website best practices",
+        "Local business digital presence optimization",
+        "Financial services compliance considerations",
+        "Multi-service business website architecture"
       ],
       demoUrl: "https://paulininsurance.net/",
       status: "Completed",
@@ -245,31 +252,107 @@ export interface Project {
     },
     {
       id: "mark-devolder",
-      title: "Mark DeVolder Personal Website",
-      description: "Personal professional website showcasing expertise and services",
-      longDescription: "Professional personal website designed to showcase individual expertise, services, and professional background.",
-      technologies: ["WordPress", "Elementor", "PHP", "CSS3", "JavaScript", "SEO Tools"],
+      title: "Mark DeVolder - Change Management Speaker",
+      description: "Professional speaker website for Dr. Mark DeVolder, global change management keynote speaker and consultant",
+      longDescription: "Comprehensive professional website for Dr. Mark DeVolder, one of the world's leading change management speakers. Features keynote presentations, training programs, consulting services, client testimonials, and booking information. Designed to showcase expertise in organizational transformation and change leadership.",
+      technologies: ["WordPress", "Custom Theme", "PHP", "CSS3", "JavaScript", "Video Integration", "SEO Tools"],
       features: [
-        "Professional biography section",
-        "Services and expertise showcase",
-        "Contact and consultation booking",
-        "Blog/insights section",
-        "Professional portfolio presentation"
+        "Professional biography and credentials showcase",
+        "Keynotes, training, and consulting service pages",
+        "Video testimonials and client success stories",
+        "Newsletter subscription system",
+        "Online booking and contact forms",
+        "Blog with change management insights",
+        "Client logo showcase with major corporations",
+        "Responsive design for all devices"
       ],
       challenges: [
-        "Creating a personal brand through web design",
-        "Balancing professionalism with personality",
-        "Optimizing for personal branding keywords"
+        "Creating a personal brand that conveys authority and approachability",
+        "Showcasing complex services (keynotes, training, consulting) clearly",
+        "Integrating video content and testimonials effectively",
+        "Building trust with high-profile corporate clients"
       ],
       lessons: [
-        "Personal branding website strategies",
-        "Professional service presentation",
-        "Individual consultant web presence"
+        "Professional speaker website best practices",
+        "Personal branding for consultants and speakers",
+        "Service presentation and conversion optimization",
+        "Corporate client engagement strategies"
       ],
       demoUrl: "https://markdevolder.com/",
       status: "Completed",
       startDate: "2023-03",
       endDate: "2023-05",
+      category: "Web App"
+    },
+    {
+      id: "local-cannabis-company",
+      title: "Local Cannabis Company",
+      description: "Premium cannabis dispensary website with multi-location support and product showcase",
+      longDescription: "Professional cannabis dispensary website for Local Cannabis Co., featuring three retail locations (Santa Monica CA, Kansas City MO, and Swampscott MA). Showcases premium West Coast craft cannabis with emphasis on quality, integrity, and passion. Includes educational resources, product information, and location-specific details.",
+      technologies: ["WordPress", "Custom Theme", "PHP", "Interactive Maps", "CSS3", "JavaScript", "E-commerce Integration"],
+      features: [
+        "Multi-location dispensary management (3 locations)",
+        "Interactive location map with store details",
+        "Product catalog and current offerings showcase",
+        "Educational content on cannabis strains and consumption methods",
+        "Genetics and cultivation information pages",
+        "Loyalty program integration",
+        "Online ordering for in-store pickup",
+        "Responsive design optimized for mobile",
+        "Age verification and compliance features"
+      ],
+      challenges: [
+        "Managing multiple location information and inventory",
+        "Ensuring cannabis industry compliance and regulations",
+        "Creating educational content that's accessible yet professional",
+        "Balancing product showcase with legal requirements",
+        "Implementing age verification and security measures"
+      ],
+      lessons: [
+        "Cannabis industry web design regulations",
+        "Multi-location business website architecture",
+        "Compliance-focused e-commerce implementation",
+        "Educational content strategy for regulated industries"
+      ],
+      demoUrl: "https://localcannabiscompany.com/",
+      status: "Completed",
+      startDate: "2024-03",
+      endDate: "2024-08",
+      category: "Web App"
+    },
+    {
+      id: "docfluent",
+      title: "Docfluent Medical Documentation",
+      description: "Healthcare technology website for AI-powered medical records management and document workflow automation",
+      longDescription: "Professional SaaS website for Docfluent, a medical documentation management platform that revolutionizes healthcare workflows with AI-powered automation and human oversight. Features comprehensive information about fax management, scanning, indexing, intelligent sorting, and 24/7 processing services for medical practices.",
+      technologies: ["WordPress", "Modern Theme", "PHP", "CSS3", "JavaScript", "Video Integration", "Booking System"],
+      features: [
+        "Service showcase with 8 core features (Faxes, Scans, Indexing, etc.)",
+        "AI technology and automation benefits presentation",
+        "Client testimonials and case studies (Texas Oncology)",
+        "Demo booking and consultation scheduling",
+        "ROI calculator and efficiency metrics display",
+        "Video demonstrations of platform capabilities",
+        "Healthcare compliance and security information",
+        "Responsive design for healthcare professionals"
+      ],
+      challenges: [
+        "Explaining complex healthcare technology in accessible terms",
+        "Building trust with medical professionals and practices",
+        "Showcasing AI capabilities while emphasizing human oversight",
+        "Highlighting HIPAA compliance and security measures",
+        "Converting visitors to demo bookings"
+      ],
+      lessons: [
+        "Healthcare SaaS website best practices",
+        "Medical industry compliance presentation",
+        "AI technology marketing and education",
+        "B2B healthcare conversion optimization"
+      ],
+      demoUrl: "https://docfluent.com/",
+      status: "Completed",
+      startDate: "2024-06",
+      endDate: "2024-11",
       category: "Web App"
     },
     {
@@ -366,26 +449,33 @@ export interface Project {
     },
     {
       id: "chris-nick-online",
-      title: "Chris Nick Online",
-      description: "Personal brand website for content creator and online personality",
-      longDescription: "Dynamic personal brand website for content creator featuring portfolio showcase, social media integration, and audience engagement features.",
-      technologies: ["WordPress", "Kadence", "PHP", "Social Media APIs", "CSS3", "Content Management"],
+      title: "Chris Nick Fashion Designer",
+      description: "High-end fashion designer portfolio website showcasing collections, press coverage, and made-to-measure services",
+      longDescription: "Elegant fashion portfolio website for Filipino designer Chris Nick, featuring multiple seasonal collections (SS/21, SS/22, SS/23, SS/24), bridal wear, evening basics, and lounge collections. Showcases work from major fashion events including LA Fashion Week, ABS CBN Ball 2023, Vogue Gala 2023, Miss Universe 2023, and collaborations with major brands like Bench, Bvlgari, and BYS.",
+      technologies: ["WordPress", "Custom Theme", "PHP", "Photo Gallery", "CSS3", "JavaScript", "Lightbox Integration"],
       features: [
-        "Content portfolio showcase",
-        "Social media feed integration",
-        "Audience engagement tools",
-        "Personal branding elements",
-        "Mobile-optimized design"
+        "Multiple collection galleries (8+ seasonal/specialty collections)",
+        "Photo carousel and lightbox gallery systems",
+        "Press coverage showcase (fashion shows, celebrity events, magazine features)",
+        "Client service and inquiry system",
+        "Made-to-measure service information",
+        "Instagram social media integration (@chrisnickofficial)",
+        "High-resolution fashion photography display",
+        "Responsive design optimized for visual content",
+        "About Chris Nick biography section"
       ],
       challenges: [
-        "Integrating multiple social media platforms",
-        "Creating engaging content presentation",
-        "Optimizing for content creator workflows"
+        "Showcasing high-quality fashion photography with fast loading",
+        "Organizing multiple collections and press features effectively",
+        "Creating elegant, minimalist design that highlights the fashion",
+        "Optimizing large image galleries for performance",
+        "Presenting made-to-measure luxury service appropriately"
       ],
       lessons: [
-        "Content creator website strategies",
-        "Social media integration techniques",
-        "Personal brand development online"
+        "High-end fashion website design principles",
+        "Photo gallery optimization and presentation",
+        "Luxury brand digital presence strategies",
+        "Visual content-heavy website performance optimization"
       ],
       demoUrl: "https://chrisnickonline.com/",
       status: "Completed",
